@@ -43,7 +43,7 @@ const server = http.createServer((req, res) => {
     counter++;
   }
 
-  console.log(`Redirigiendo la solicitud a: [${targetName}] ${target}`);
+  console.log(`[${targetName}] ${target} method: ${req.method}, url: ${req.url}`);
 
   // Redirigir la solicitud al target correspondiente
   proxy.web(req, res, { target });
